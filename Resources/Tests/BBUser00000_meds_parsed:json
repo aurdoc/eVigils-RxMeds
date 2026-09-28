@@ -1,0 +1,382 @@
+[
+  {
+    "claim_id": "pde--10602140398",
+    "ndc": "00045045270",
+    "dispensed_date": "2016-03-01",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140399",
+    "ndc": "00045045270",
+    "dispensed_date": "2016-03-11",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140400",
+    "ndc": "00045045270",
+    "dispensed_date": "2016-03-21",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140401",
+    "ndc": "00045045270",
+    "dispensed_date": "2016-03-31",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140402",
+    "ndc": "16714029501",
+    "dispensed_date": "2016-09-13",
+    "quantity": 17.0,
+    "days_supply": 17,
+    "fill_number": 1,
+    "prescriber_npi": "9999998789",
+    "pharmacy_npi": "014018"
+  },
+  {
+    "claim_id": "pde--10602140403",
+    "ndc": "00045049660",
+    "dispensed_date": "2017-03-07",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140404",
+    "ndc": "00045049660",
+    "dispensed_date": "2017-03-17",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140405",
+    "ndc": "00045049660",
+    "dispensed_date": "2017-03-27",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140406",
+    "ndc": "00045049660",
+    "dispensed_date": "2017-04-06",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140407",
+    "ndc": "50580050150",
+    "dispensed_date": "2018-03-13",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140408",
+    "ndc": "50580050150",
+    "dispensed_date": "2018-03-23",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140409",
+    "ndc": "50580050150",
+    "dispensed_date": "2018-04-02",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140410",
+    "ndc": "50580050150",
+    "dispensed_date": "2018-04-12",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140411",
+    "ndc": "00705182798",
+    "dispensed_date": "2019-03-19",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140412",
+    "ndc": "00705182798",
+    "dispensed_date": "2019-03-29",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140413",
+    "ndc": "00705182798",
+    "dispensed_date": "2019-04-08",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140414",
+    "ndc": "00705182798",
+    "dispensed_date": "2019-04-18",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140415",
+    "ndc": "00045049660",
+    "dispensed_date": "2020-03-24",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140416",
+    "ndc": "00045049660",
+    "dispensed_date": "2020-04-03",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140417",
+    "ndc": "00045049660",
+    "dispensed_date": "2020-04-13",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140418",
+    "ndc": "00045049660",
+    "dispensed_date": "2020-04-23",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140419",
+    "ndc": "50580050180",
+    "dispensed_date": "2021-03-30",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140420",
+    "ndc": "50580050180",
+    "dispensed_date": "2021-04-09",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140421",
+    "ndc": "50580050180",
+    "dispensed_date": "2021-04-19",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140422",
+    "ndc": "50580050180",
+    "dispensed_date": "2021-04-29",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140423",
+    "ndc": "50580049650",
+    "dispensed_date": "2022-04-05",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140424",
+    "ndc": "50580049650",
+    "dispensed_date": "2022-04-15",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140425",
+    "ndc": "50580049650",
+    "dispensed_date": "2022-04-25",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140426",
+    "ndc": "50580049650",
+    "dispensed_date": "2022-05-05",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140427",
+    "ndc": "50580050150",
+    "dispensed_date": "2023-04-11",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140428",
+    "ndc": "50580050150",
+    "dispensed_date": "2023-04-21",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140429",
+    "ndc": "50580050150",
+    "dispensed_date": "2023-05-01",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140430",
+    "ndc": "50580050150",
+    "dispensed_date": "2023-05-11",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140431",
+    "ndc": "00636297619",
+    "dispensed_date": "2024-03-30",
+    "quantity": 7.0,
+    "days_supply": 7,
+    "fill_number": 1,
+    "prescriber_npi": "9999998789",
+    "pharmacy_npi": "014018"
+  },
+  {
+    "claim_id": "pde--10602140432",
+    "ndc": "00551541928",
+    "dispensed_date": "2024-04-16",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 1,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140433",
+    "ndc": "00551541928",
+    "dispensed_date": "2024-04-26",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 2,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140434",
+    "ndc": "00551541928",
+    "dispensed_date": "2024-05-06",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 3,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  },
+  {
+    "claim_id": "pde--10602140435",
+    "ndc": "00551541928",
+    "dispensed_date": "2024-05-16",
+    "quantity": 40.0,
+    "days_supply": 10,
+    "fill_number": 4,
+    "prescriber_npi": "9999997399",
+    "pharmacy_npi": "011838"
+  }
+]
