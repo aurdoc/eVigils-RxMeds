@@ -1,0 +1,15 @@
+services:
+  rxmed:
+    build: .
+    container_name: evigils-rxmed
+    networks:
+      - rxnav
+    volumes:
+      - ./Resources/Tests:/app/Resources/Tests:ro
+      - ./data:/app/data
+
+networks:
+  rxnav:
+    external: true
+    name: rxnav_default
+    

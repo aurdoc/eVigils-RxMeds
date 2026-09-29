@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Runtime/generated data
+data/
+
+# Secrets/environment
+.env
+secrets/
