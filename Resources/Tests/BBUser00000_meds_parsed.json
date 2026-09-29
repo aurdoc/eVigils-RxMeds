@@ -356,7 +356,7 @@
     "quantity": 40.0,
     "days_supply": 10,
     "fill_number": 2,
-    "prescriber_npi": "9999997399",
+    "prescriber_npi": "1881770220",
     "pharmacy_npi": "011838"
   },
   {
@@ -367,7 +367,7 @@
     "days_supply": 10,
     "fill_number": 3,
     "prescriber_npi": "9999997399",
-    "pharmacy_npi": "011838"
+    "pharmacy_npi": "1851499693"
   },
   {
     "claim_id": "pde--10602140435",
@@ -376,7 +376,7 @@
     "quantity": 40.0,
     "days_supply": 10,
     "fill_number": 4,
-    "prescriber_npi": "9999997399",
-    "pharmacy_npi": "011838"
+    "prescriber_npi": "1881770220",
+    "pharmacy_npi": "1851499693"
   }
 ]
