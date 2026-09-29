@@ -34,16 +34,15 @@ def decode_ndc(ndc):
             f"RxNav request failed for NDC {ndc}: {error}"
         ) from error
 
-    status = result.get("ndcStatus", {})
-    rxcui = status.get("rxcui")
-    name = status.get("conceptName")
+    ndc_status = result.get("ndcStatus", {})
+    rxcui = ndc_status.get("rxcui")
+    name = ndc_status.get("conceptName")
 
     if not rxcui or not name:
         return {
-            "name": None,
-            "rxcui": None,
-            "ndc": ndc,
-            "status": "UNKNOWN"
+            "name": "Not provided",
+            "rxcui": "",
+            "ndc": ndc
         }
 
     return {
@@ -83,11 +82,12 @@ def decode_npi(npi):
     if npi in _nppes_cache:
         return _nppes_cache[npi]
 
+    result = {
+        "npi": npi or "",
+        "name": "Not provided"
+    }
+
     if not valid_npi(npi):
-        result = {
-            "npi": npi,
-            "status": "UNKNOWN"
-        }
         _nppes_cache[npi] = result
         return result
 
@@ -99,20 +99,12 @@ def decode_npi(npi):
     try:
         response = get_json(url)
     except Exception:
-        result = {
-            "npi": npi,
-            "status": "UNKNOWN"
-        }
         _nppes_cache[npi] = result
         return result
 
     results = response.get("results", [])
 
     if not results:
-        result = {
-            "npi": npi,
-            "status": "UNKNOWN"
-        }
         _nppes_cache[npi] = result
         return result
 
@@ -121,10 +113,6 @@ def decode_npi(npi):
     enumeration_type = provider.get("enumeration_type")
     address = select_location(provider.get("addresses", []))
     taxonomy = select_taxonomy(provider.get("taxonomies", []))
-
-    result = {
-        "npi": npi
-    }
 
     if enumeration_type == "NPI-1":
         parts = [
@@ -138,34 +126,34 @@ def decode_npi(npi):
         if credential:
             name = f"{name}, {credential}" if name else credential
 
-        result["name"] = name or None
+        if name:
+            result["name"] = name
 
     elif enumeration_type == "NPI-2":
-        result["name"] = basic.get("organization_name")
+        if basic.get("organization_name"):
+            result["name"] = basic["organization_name"]
 
     else:
-        result["name"] = (
-            basic.get("organization_name")
-            or basic.get("name")
-        )
+        name = basic.get("organization_name") or basic.get("name")
+        if name:
+            result["name"] = name
 
-    if taxonomy:
-        result["specialty"] = taxonomy.get("desc")
+    if taxonomy and taxonomy.get("desc"):
+        result["specialty"] = taxonomy["desc"]
 
     if address:
-        result["address"] = address.get("address_1")
+        if address.get("address_1"):
+            result["address"] = address["address_1"]
         if address.get("address_2"):
-            result["address_2"] = address.get("address_2")
-        result["city"] = address.get("city")
-        result["state"] = address.get("state")
-        result["zip"] = address.get("postal_code")
-        result["phone"] = address.get("telephone_number")
-
-    result = {
-        key: value
-        for key, value in result.items()
-        if value is not None
-    }
+            result["address_2"] = address["address_2"]
+        if address.get("city"):
+            result["city"] = address["city"]
+        if address.get("state"):
+            result["state"] = address["state"]
+        if address.get("postal_code"):
+            result["zip"] = address["postal_code"]
+        if address.get("telephone_number"):
+            result["phone"] = address["telephone_number"]
 
     _nppes_cache[npi] = result
     return result
