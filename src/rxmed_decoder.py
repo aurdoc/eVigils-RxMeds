@@ -2,15 +2,36 @@
 
 import json
 import sys
+import threading
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
 
-RXNAV_URL = "http://nginx/REST/ndcstatus.json"
-NPPES_URL = "https://npiregistry.cms.hhs.gov/api/"
+DEFAULT_RXNAV_URL = "http://nginx/REST/ndcstatus.json"
+DEFAULT_NPPES_URL = "https://npiregistry.cms.hhs.gov/api/"
 
 _nppes_cache = {}
+
+
+class EndpointManager:
+    def __init__(self, rxnav_url, nppes_url):
+        self._lock = threading.Lock()
+        self._endpoints = (rxnav_url, nppes_url)
+
+    def snapshot(self):
+        with self._lock:
+            return self._endpoints
+
+    def update(self, rxnav_url, nppes_url):
+        with self._lock:
+            self._endpoints = (rxnav_url, nppes_url)
+
+
+_endpoint_manager = EndpointManager(
+    DEFAULT_RXNAV_URL,
+    DEFAULT_NPPES_URL
+)
 
 
 def get_json(url):
@@ -23,8 +44,8 @@ def get_json(url):
         return json.load(response)
 
 
-def decode_ndc(ndc):
-    url = RXNAV_URL + "?" + urllib.parse.urlencode({"ndc": ndc})
+def decode_ndc(ndc, rxnav_url):
+    url = rxnav_url + "?" + urllib.parse.urlencode({"ndc": ndc})
 
     try:
         result = get_json(url)
@@ -78,7 +99,7 @@ def select_taxonomy(taxonomies):
     return taxonomies[0]
 
 
-def decode_npi(npi):
+def decode_npi(npi, nppes_url):
     if npi in _nppes_cache:
         return _nppes_cache[npi]
 
@@ -91,7 +112,7 @@ def decode_npi(npi):
         _nppes_cache[npi] = result
         return result
 
-    url = NPPES_URL + "?" + urllib.parse.urlencode({
+    url = nppes_url + "?" + urllib.parse.urlencode({
         "version": "2.1",
         "number": npi
     })
@@ -159,12 +180,12 @@ def decode_npi(npi):
     return result
 
 
-def decode_claim(record):
+def decode_claim(record, rxnav_url, nppes_url):
     decoded = dict(record)
 
-    decoded["medication"] = decode_ndc(record["ndc"])
-    decoded["prescriber"] = decode_npi(record.get("prescriber_npi"))
-    decoded["pharmacy"] = decode_npi(record.get("pharmacy_npi"))
+    decoded["medication"] = decode_ndc(record["ndc"], rxnav_url)
+    decoded["prescriber"] = decode_npi(record.get("prescriber_npi"), nppes_url)
+    decoded["pharmacy"] = decode_npi(record.get("pharmacy_npi"), nppes_url)
 
     return decoded
 
@@ -226,8 +247,10 @@ def main():
     with input_path.open("r", encoding="utf-8") as file:
         records = json.load(file)
 
+    rxnav_url, nppes_url = _endpoint_manager.snapshot()
+
     decoded_claims = [
-        decode_claim(record)
+        decode_claim(record, rxnav_url, nppes_url)
         for record in records
     ]
 
