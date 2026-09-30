@@ -4,4 +4,6 @@ WORKDIR /app
 
 COPY src/ /app/src/
 
-ENTRYPOINT ["python3", "/app/src/rxmed_decoder.py"]
+EXPOSE 8080
+
+ENTRYPOINT ["python3", "/app/src/rxmed_server.py"]
